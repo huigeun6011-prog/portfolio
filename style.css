@@ -1,0 +1,176 @@
+/* 기본 초기화 및 폰트 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    background-color: #fcfcfc; /* 아주 옅은 회색 배경 */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 강조 색상 (신뢰감을 주는 파란색 계열) */
+.highlight {
+    color: #0056b3; 
+}
+
+/* 1. 상단 소개 영역 */
+.hero {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.hero .subtitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.hero .description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* 버튼 스타일 */
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: #0056b3; /* 강조색 */
+    color: #ffffff;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #004494;
+}
+
+/* 공통 레이아웃 (가운데 정렬) */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.section {
+    margin-bottom: 60px;
+}
+
+.section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0056b3; /* 섹션 제목 아래 강조선 */
+    display: inline-block;
+}
+
+/* 2. 기술 스택 태그 */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background-color: #eef4fc; /* 아주 옅은 파란색 배경 */
+    color: #0056b3;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* 3. 프로젝트 카드 */
+.project-card {
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: box-shadow 0.3s;
+}
+
+.project-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.project-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.project-date {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.project-desc {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.project-tech {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.project-tech li {
+    font-size: 0.8rem;
+    background: #f0f0f0;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: #555;
+}
+
+.project-link {
+    font-weight: 500;
+    color: #0056b3;
+    font-size: 0.9rem;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* 4. 연락처 영역 링크 */
+.section p a {
+    color: #0056b3;
+    font-weight: 500;
+}
+
+.section p a:hover {
+    text-decoration: underline;
+}
+
+/* 하단 푸터 */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #222;
+    color: #888;
+    font-size: 0.9rem;
+}
