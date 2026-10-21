@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>홍길동 | 백엔드 개발자 포트폴리오</title>
-    <!-- 구글 폰트 (Noto Sans KR) 적용 -->
+    <title>[홍길동] | 백엔드 개발자 포트폴리오</title>
+    <!-- 구글 폰트 (Noto Sans KR) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
@@ -15,13 +15,14 @@
 
     <!-- 1. 상단 소개 영역 -->
     <header class="hero">
-        <h1>안녕하세요, <span class="highlight">백엔드 개발자 홍길동</span>입니다.</h1>
-        <p class="subtitle">안정적인 시스템 구축과 데이터 처리를 고민합니다.</p>
+        <h1>안녕하세요, <span class="highlight">백엔드 개발자 [홍길동]</span>입니다.</h1>
+        <p class="subtitle">데이터의 흐름을 이해하고, 안정적인 시스템을 구축합니다.</p>
         <p class="description">
-            자바(Java)와 스프링(Spring)을 기반으로 웹 애플리케이션을 개발합니다.<br>
-            공공기관 및 공기업의 IT 시스템 운영과 유지보수에 기여하고 싶습니다.
+            공공기관 및 공기업의 IT 시스템 운영과 유지보수에 기여하고자 합니다.<br>
+            자바(Java)와 전자정부 표준프레임워크를 기반으로 웹 애플리케이션을 구현하며,<br>
+            주도적으로 문제를 해결하고 아키텍처의 원리를 파고드는 역량을 갖추고 있습니다.
         </p>
-        <a href="#projects" class="btn">프로젝트 보기</a>
+        <a href="#projects" class="btn">프로젝트 경험 보기</a>
     </header>
 
     <main>
@@ -29,47 +30,79 @@
         <section class="section">
             <h2>기술 스택</h2>
             <div class="skill-list">
+                <!-- 계층별로 정리하여 신뢰감 부여 -->
                 <span class="skill-tag">Java</span>
-                <span class="skill-tag">Spring Boot</span>
-                <span class="skill-tag">Spring MVC</span>
-                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">Spring</span>
+                <span class="skill-tag">eGovFramework 3.10</span>
                 <span class="skill-tag">MyBatis</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">JSP</span>
                 <span class="skill-tag">HTML/CSS</span>
-                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Git / GitHub</span>
             </div>
         </section>
 
-        <!-- 3. 프로젝트 영역 -->
+        <!-- 3. 프로젝트 경험 영역 -->
         <section class="section" id="projects">
             <h2>프로젝트 경험</h2>
             
+            <!-- 프로젝트 1: 전자정부 -->
             <div class="project-card">
-                <h3>전자정부 프레임워크 기반 게시판 시스템</h3>
-                <p class="project-date">개인 프로젝트 | 2024.01 ~ 2024.03</p>
+                <h3>전자정부 표준프레임워크 기반 웹 게시판 시스템</h3>
+                <p class="project-date">개인 프로젝트 | 2026.05 ~ 2026.07 (2개월)</p>
                 <p class="project-desc">
-                    전자정부 표준프레임워크를 활용하여 구현한 기본적인 게시판입니다. CRUD, 페이징 처리, 세션 기반 로그인 기능을 포함하고 있습니다.
+                    공공기관 표준인 전자정부 프레임워크(eGov 3.10.0)를 직접 세팅하여 표준화된 웹 애플리케이션 구조를 경험했습니다. 매뉴얼만으로 환경을 구축하고, 코드를 역추적하며 전체 데이터 흐름을 파악했습니다.
                 </p>
-                <ul class="project-tech">
-                    <li>Java 11</li>
-                    <li>Spring Framework</li>
-                    <li>Oracle DB</li>
+                <ul class="project-highlights">
+                    <li><strong>독립적인 개발 환경 구축:</strong> 아파치, DB 스키마 생성 및 보안 설정, DDL/DML을 활용한 초기 데이터 적재를 직접 수행하여 구동 환경을 성공적으로 구축했습니다.</li>
+                    <li><strong>데이터 흐름 파악:</strong> 브라우저 URL과 문자열 검색을 통해 <strong>Controller → Service → Mapper(MyBatis) → VO → DB</strong>로 이어지는 스프링 MVC 아키텍처의 핵심 흐름을 시각화하여 이해했습니다.</li>
+                    <li><strong>아키텍처 응용:</strong> 파악한 구조를 바탕으로 기존 게시판과 동일한 구조의 게시판을 새로 구현하며 프레임워크의 동작 원리를 체득했습니다.</li>
+                    <li><strong>핵심 기능 구현:</strong> VO(Value Object) 패턴을 활용한 계층 간 데이터 전달, MyBatis 매퍼 연동을 통한 CRUD, 세션 기반 로그인/회원가입, 파일 업로드(권한 제어), 댓글, 검색, 페이징 처리 등을 구현했습니다.</li>
                 </ul>
-                <a href="깃허브_링크_주소를_여기에_넣으세요" target="_blank" class="project-link">GitHub 코드 보기 &rarr;</a>
+                <ul class="project-tech">
+                    <li>Java</li>
+                    <li>Spring</li>
+                    <li>MyBatis</li>
+                    <li>JSP</li>
+                    <li>MySQL</li>
+                </ul>
+                <!-- 깃허브 링크를 여기에 넣으세요 -->
+                <a href="[깃허브 주소]" target="_blank" class="project-link">GitHub 소스 코드 및 README 보기 &rarr;</a>
             </div>
 
-            <!-- 프로젝트가 더 있다면 위 div를 복사해서 추가하세요 -->
+            <!-- 프로젝트 2: 대학교 캡스톤 -->
+            <div class="project-card">
+                <h3>교환학생 수학보고서 정보 공유 웹페이지 (SKKUEXS)</h3>
+                <p class="project-date">대학교 캡스톤 디자인 | 2023.03 ~ 2023.06 (4개월) | 팀장 및 데이터 처리</p>
+                <p class="project-desc">
+                    교환학생들의 수학보고서를 요약하여 정보를 공유하는 웹페이지 프로젝트입니다. 팀장을 맡아 자료 제출을 총괄하는 한편, 데이터 수집 및 전처리, 프론트엔드 일부를 담당했습니다.
+                </p>
+                <ul class="project-highlights">
+                    <li><strong>데이터 파이프라인 구축:</strong> 셀레니움 크롤링으로 문서(doc, hwp, pdf)를 수집하고, 파이썬 알고리즘을 통해 필요한 항목을 추출하여 CSV로 변환 및 DB 설계.</li>
+                    <li><strong>AI 활용:</strong> 2023년 당시 OpenAI API를 도입하여 보고서 내용을 요약하고, 향후 운영을 고려한 데이터 자동 가공 코드를 설계함.</li>
+                    <li><strong>트러블슈팅:</strong> 예전 파일과 최신 파일의 문서 포맷이 달라 데이터 추출이 어려운 문제를 '전체 텍스트 추출 후 중복 제거' 방식으로 해결함.</li>
+                </ul>
+                <ul class="project-tech">
+                    <li>Python</li>
+                    <li>Selenium</li>
+                    <li>OpenAI API</li>
+                    <li>MySQL</li>
+                </ul>
+                <a href="[깃허브 주소]" target="_blank" class="project-link">GitHub 소스 코드 및 README 보기 &rarr;</a>
+            </div>
         </section>
 
         <!-- 4. 연락처 영역 -->
         <section class="section">
             <h2>연락처</h2>
-            <p>이메일: <a href="mailto:이메일주소@example.com">이메일주소@example.com</a></p>
-            <p>GitHub: <a href="https://github.com/깃허브아이디" target="_blank">github.com/깃허브아이디</a></p>
+            <p>이메일: <a href="mailto:[이메일주소]">[이메일주소]</a></p>
+            <p>GitHub: <a href="[깃허브 주소]" target="_blank">[깃허브 주소]</a></p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 홍길동. All rights reserved.</p>
+        <p>&copy; 2026 [홍길동]. All rights reserved.</p>
     </footer>
 
 </body>
