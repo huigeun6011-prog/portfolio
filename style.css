@@ -12,7 +12,7 @@ html {
 body {
     font-family: 'Noto Sans KR', sans-serif;
     color: #333333;
-    line-height: 1.75; /* 가독성을 위해 줄 간격 넓힘 */
+    line-height: 1.75; 
     background-color: #fcfcfc; 
 }
 
@@ -57,7 +57,7 @@ a:hover {
 
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 15px; /* 메뉴가 5개로 늘어나 간격 살짝 줄임 */
     align-items: center;
 }
 
@@ -112,22 +112,41 @@ main {
 /* Intro 섹션 전용 */
 .hero-section {
     background-color: #ffffff;
-    text-align: left; /* 담백한 느낌을 위해 왼쪽 정렬 */
+    text-align: left; 
     padding: 80px 0;
 }
 
 .hero-section h1 {
     font-size: 2.2rem;
     line-height: 1.4;
-    margin-bottom: 30px;
+    margin-bottom: 20px; 
     text-align: center;
+}
+
+.core-tags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.core-tags .tag {
+    background-color: #eef4fc;
+    color: #0056b3;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border: 1px solid #d0e2f5;
 }
 
 .intro-text p {
     font-size: 1.05rem;
     color: #555;
     margin-bottom: 15px;
-    text-align: justify; /* 양끝 정렬로 깔끔하게 */
+    text-align: justify;
 }
 
 .intro-text strong {
@@ -135,7 +154,7 @@ main {
     font-weight: 700;
 }
 
-/* 카드 디자인 (Journey, Beyond Code) */
+/* 카드 디자인 (Journey, Attitude, Beyond Code) */
 .card {
     background: #ffffff;
     border: 1px solid #eaeaea;
@@ -220,7 +239,6 @@ footer {
         font-size: 11pt;
     }
 
-    /* 네비게이션, 인쇄버튼, 푸터 숨김 */
     .navbar, .print-btn, footer {
         display: none !important;
     }
@@ -232,12 +250,18 @@ footer {
     .section {
         padding: 20px 0;
         border-bottom: none;
-        page-break-inside: avoid; /* 카드 중간 잘림 방지 */
+        page-break-inside: avoid;
     }
 
     .section h2 {
         border-bottom: 2px solid #000000;
         color: #000000;
+    }
+
+    .core-tags .tag {
+        border: 1px solid #000;
+        color: #000;
+        background: #fff;
     }
 
     .card {
@@ -248,7 +272,6 @@ footer {
         page-break-inside: avoid;
     }
 
-    /* 링크 주소 텍스트로 출력 */
     a[href^="http"]::after, a[href^="mailto"]::after {
         content: " (" attr(href) ")";
         font-size: 0.9em;
