@@ -30,7 +30,6 @@
         <section class="section">
             <h2>기술 스택</h2>
             <div class="skill-list">
-                <!-- 계층별로 정리하여 신뢰감 부여 -->
                 <span class="skill-tag">Java</span>
                 <span class="skill-tag">Spring</span>
                 <span class="skill-tag">eGovFramework 3.10</span>
@@ -47,16 +46,16 @@
         <section class="section" id="projects">
             <h2>프로젝트 경험</h2>
             
-            <!-- 프로젝트 1: 전자정부 -->
+            <!-- 프로젝트 1: 전자정부 (인턴십) -->
             <div class="project-card">
                 <h3>전자정부 표준프레임워크 기반 웹 게시판 시스템</h3>
-                <p class="project-date">개인 프로젝트 | 2026.05 ~ 2026.07 (2개월)</p>
+                <p class="project-date">인턴십 경험 | 2026.05 ~ 2026.07 (2개월)</p>
                 <p class="project-desc">
-                    공공기관 표준인 전자정부 프레임워크(eGov 3.10.0)를 직접 세팅하여 표준화된 웹 애플리케이션 구조를 경험했습니다. 매뉴얼만으로 환경을 구축하고, 코드를 역추적하며 전체 데이터 흐름을 파악했습니다.
+                    인턴십 기간 중 담당자분의 제안으로 전자정부 표준프레임워크(eGov 3.10.0) 환경 구축 및 게시판 구현 과제를 수행했습니다. 사수의 지도 없이 1인 독학으로 매뉴얼과 사례를 찾아가며 환경을 세팅하고, 전체 데이터 흐름을 파악했습니다.
                 </p>
                 <ul class="project-highlights">
-                    <li><strong>독립적인 개발 환경 구축:</strong> 아파치, DB 스키마 생성 및 보안 설정, DDL/DML을 활용한 초기 데이터 적재를 직접 수행하여 구동 환경을 성공적으로 구축했습니다.</li>
-                    <li><strong>데이터 흐름 파악:</strong> 브라우저 URL과 문자열 검색을 통해 <strong>Controller → Service → Mapper(MyBatis) → VO → DB</strong>로 이어지는 스프링 MVC 아키텍처의 핵심 흐름을 시각화하여 이해했습니다.</li>
+                    <li><strong>기업 환경에서의 주도적 문제 해결:</strong> 아무런 가이드 없이 주어진 과제를 완수하기 위해, 아파치 세팅부터 MySQL 환경의 DB 스키마 생성 및 보안 설정, DDL/DML을 활용한 초기 데이터 적재까지 스스로 학습하여 구동 환경을 구축했습니다.</li>
+                    <li><strong>데이터 흐름 파악:</strong> 브라우저 URL과 문자열 검색을 통해 Controller → Service → Mapper(MyBatis) → VO → DB로 이어지는 스프링 MVC 아키텍처의 핵심 흐름을 시각화하여 이해했습니다.</li>
                     <li><strong>아키텍처 응용:</strong> 파악한 구조를 바탕으로 기존 게시판과 동일한 구조의 게시판을 새로 구현하며 프레임워크의 동작 원리를 체득했습니다.</li>
                     <li><strong>핵심 기능 구현:</strong> VO(Value Object) 패턴을 활용한 계층 간 데이터 전달, MyBatis 매퍼 연동을 통한 CRUD, 세션 기반 로그인/회원가입, 파일 업로드(권한 제어), 댓글, 검색, 페이징 처리 등을 구현했습니다.</li>
                 </ul>
@@ -76,12 +75,12 @@
                 <h3>교환학생 수학보고서 정보 공유 웹페이지 (SKKUEXS)</h3>
                 <p class="project-date">대학교 캡스톤 디자인 | 2023.03 ~ 2023.06 (4개월) | 팀장 및 데이터 처리</p>
                 <p class="project-desc">
-                    교환학생들의 수학보고서를 요약하여 정보를 공유하는 웹페이지 프로젝트입니다. 팀장을 맡아 자료 제출을 총괄하는 한편, 데이터 수집 및 전처리, 프론트엔드 일부를 담당했습니다.
+                    교환학생들의 수학보고서를 요약하여 정보를 공유하는 웹페이지 프로젝트입니다. 팀장을 맡아 자료 제출을 총괄하는 한편, 데이터 수집/전처리 파이프라인과 프론트엔드 일부를 담당했습니다.
                 </p>
                 <ul class="project-highlights">
-                    <li><strong>데이터 파이프라인 구축:</strong> 셀레니움 크롤링으로 문서(doc, hwp, pdf)를 수집하고, 파이썬 알고리즘을 통해 필요한 항목을 추출하여 CSV로 변환 및 DB 설계.</li>
-                    <li><strong>AI 활용:</strong> 2023년 당시 OpenAI API를 도입하여 보고서 내용을 요약하고, 향후 운영을 고려한 데이터 자동 가공 코드를 설계함.</li>
-                    <li><strong>트러블슈팅:</strong> 예전 파일과 최신 파일의 문서 포맷이 달라 데이터 추출이 어려운 문제를 '전체 텍스트 추출 후 중복 제거' 방식으로 해결함.</li>
+                    <li><strong>데이터 파이프라인 구축:</strong> Selenium을 활용해 문서(doc, hwp, pdf)를 수집하고, 파이썬 알고리즘을 통해 필요한 항목을 추출하여 CSV로 변환 및 DB 설계를 진행했습니다.</li>
+                    <li><strong>데이터 파편화 해결:</strong> 예전 파일과 최신 파일의 문서 포맷이 달라 추출이 어려운 문제를 겪고, 문서 내 모든 텍스트를 추출한 뒤 중복을 제거하는 방식으로 해결했습니다.</li>
+                    <li><strong>협업 및 유지보수 고려:</strong> 동료가 겪던 댓글 API 연동 문제를 분석해 해결을 도왔으며, 추후 구글 폼으로 데이터를 제출받아도 바로 적용할 수 있도록 데이터 가공 코드를 설계했습니다.</li>
                 </ul>
                 <ul class="project-tech">
                     <li>Python</li>
