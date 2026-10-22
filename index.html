@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[홍길동] | 백엔드 개발자 포트폴리오</title>
+    <title>[이름] | 백엔드 개발자 포트폴리오</title>
     <!-- 구글 폰트 (Noto Sans KR) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,96 +13,119 @@
 </head>
 <body>
 
-    <!-- 1. 상단 소개 영역 -->
-    <header class="hero">
-        <h1>안녕하세요, <span class="highlight">백엔드 개발자 [홍길동]</span>입니다.</h1>
-        <p class="subtitle">데이터의 흐름을 이해하고, 안정적인 시스템을 구축합니다.</p>
-        <p class="description">
-            공공기관 및 공기업의 IT 시스템 운영과 유지보수에 기여하고자 합니다.<br>
-            자바(Java)와 전자정부 표준프레임워크를 기반으로 웹 애플리케이션을 구현하며,<br>
-            주도적으로 문제를 해결하고 아키텍처의 원리를 파고드는 역량을 갖추고 있습니다.
-        </p>
-        <a href="#projects" class="btn">프로젝트 경험 보기</a>
-    </header>
+    <!-- 상단 고정 네비게이션 바 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#intro" class="nav-logo">[이름]</a>
+            <div class="nav-links">
+                <a href="#intro">Intro</a>
+                <a href="#journey">Journey</a>
+                <a href="#beyond">Beyond Code</a>
+                <a href="#contact">Contact</a>
+                <button onclick="window.print()" class="print-btn">인쇄 / PDF 저장</button>
+            </div>
+        </div>
+    </nav>
 
+    <!-- 메인 콘텐츠 영역 -->
     <main>
-        <!-- 2. 기술 스택 영역 -->
-        <section class="section">
-            <h2>기술 스택</h2>
-            <div class="skill-list">
-                <span class="skill-tag">Java</span>
-                <span class="skill-tag">Spring</span>
-                <span class="skill-tag">eGovFramework 3.10</span>
-                <span class="skill-tag">MyBatis</span>
-                <span class="skill-tag">MySQL</span>
-                <span class="skill-tag">JSP</span>
-                <span class="skill-tag">HTML/CSS</span>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Git / GitHub</span>
+        <!-- 섹션 1: Intro -->
+        <section id="intro" class="section hero-section">
+            <div class="container">
+                <h1 class="highlight">수학적 사고와 데이터로 증명하며,<br>최적의 흐름을 설계합니다.</h1>
+                <div class="intro-text">
+                    <p>
+                        안녕하세요, 백엔드 개발자 [이름]입니다. 수학과 복수전공으로 시작해 컴퓨터의 매력에 빠져 개발자의 길을 걷게 되었습니다. 
+                        저는 단순히 돌아가는 코드를 작성하는 것보다, <strong>'왜 이렇게 동작하는가'</strong>를 파고들어 원리를 이해하는 것을 즐깁니다.
+                    </p>
+                    <p>
+                        이러한 성향은 일상에서도 드러납니다. 목적지까지의 경로를 미리 구상하며 신호등 주기까지 외워 동선을 최적화하고, 짐을 쌀 때도 이동 횟수를 줄이는 배치를 고민합니다. 
+                        게임에서도 마찬가지입니다. 단순한 공략 암기에 그치지 않고 '이 처리가 최적일까?', '다른 방법은 없을까?'를 고민하며 데이터를 기반으로 논리적으로 사고합니다. 
+                        신뢰할 수 있는 결과물을 만들어내는 개발자가 되겠습니다.
+                </div>
             </div>
         </section>
 
-        <!-- 3. 프로젝트 경험 영역 -->
-        <section class="section" id="projects">
-            <h2>프로젝트 경험</h2>
-            
-            <!-- 프로젝트 1: 전자정부 (인턴십) -->
-            <div class="project-card">
-                <h3>전자정부 표준프레임워크 기반 웹 게시판 시스템</h3>
-                <p class="project-date">인턴십 경험 | 2026.05 ~ 2026.07 (2개월)</p>
-                <p class="project-desc">
-                    인턴십 기간 중 담당자분의 제안으로 전자정부 표준프레임워크(eGov 3.10.0) 환경 구축 및 게시판 구현 과제를 수행했습니다. 사수의 지도 없이 1인 독학으로 매뉴얼과 사례를 찾아가며 환경을 세팅하고, 전체 데이터 흐름을 파악했습니다.
-                </p>
-                <ul class="project-highlights">
-                    <li><strong>기업 환경에서의 주도적 문제 해결:</strong> 아무런 가이드 없이 주어진 과제를 완수하기 위해, 아파치 세팅부터 MySQL 환경의 DB 스키마 생성 및 보안 설정, DDL/DML을 활용한 초기 데이터 적재까지 스스로 학습하여 구동 환경을 구축했습니다.</li>
-                    <li><strong>데이터 흐름 파악:</strong> 브라우저 URL과 문자열 검색을 통해 Controller → Service → Mapper(MyBatis) → VO → DB로 이어지는 스프링 MVC 아키텍처의 핵심 흐름을 시각화하여 이해했습니다.</li>
-                    <li><strong>아키텍처 응용:</strong> 파악한 구조를 바탕으로 기존 게시판과 동일한 구조의 게시판을 새로 구현하며 프레임워크의 동작 원리를 체득했습니다.</li>
-                    <li><strong>핵심 기능 구현:</strong> VO(Value Object) 패턴을 활용한 계층 간 데이터 전달, MyBatis 매퍼 연동을 통한 CRUD, 세션 기반 로그인/회원가입, 파일 업로드(권한 제어), 댓글, 검색, 페이징 처리 등을 구현했습니다.</li>
-                </ul>
-                <ul class="project-tech">
-                    <li>Java</li>
-                    <li>Spring</li>
-                    <li>MyBatis</li>
-                    <li>JSP</li>
-                    <li>MySQL</li>
-                </ul>
-                <!-- 깃허브 링크를 여기에 넣으세요 -->
-                <a href="[깃허브 주소]" target="_blank" class="project-link">GitHub 소스 코드 및 README 보기 &rarr;</a>
-            </div>
+        <!-- 섹션 2: Journey -->
+        <section id="journey" class="section">
+            <div class="container">
+                <h2>Journey</h2>
+                
+                <div class="card">
+                    <h3>전자정부 표준프레임워크 기반 웹 게시판 시스템</h3>
+                    <p class="subtitle">인턴십 경험 | 2026.05 ~ 2026.07 (2개월)</p>
+                    <ul>
+                        <li><strong>1인 독학 및 환경 구축:</strong> 담당자의 제안으로 시작된 과제를 완수하기 위해, 매뉴얼과 사례만 참고하여 아파치 세팅부터 MySQL DB 스키마 생성 및 보안 설정, DDL/DML을 활용한 초기 데이터 적재까지 스스로 수행했습니다.</li>
+                        <li><strong>데이터 흐름 파악:</strong> 화면의 URL과 이클립스 문자열 검색을 통해 코드를 역추적하며 Controller → Service → Mapper(MyBatis) → VO → DB로 이어지는 스프링 MVC의 핵심 흐름을 파악했습니다.</li>
+                        <li><strong>핵심 기능 구현:</strong> 파악한 구조를 바탕으로 기존 게시판과 동일한 구조의 게시판을 새로 구현하며 원리를 체득했고, 세션 기반 로그인/회원가입, 파일 업로드(권한 제어), 댓글, 검색, 페이징 처리 등을 직접 구현했습니다.</li>
+                    </ul>
+                </div>
 
-            <!-- 프로젝트 2: 대학교 캡스톤 -->
-            <div class="project-card">
-                <h3>교환학생 수학보고서 정보 공유 웹페이지 (SKKUEXS)</h3>
-                <p class="project-date">대학교 캡스톤 디자인 | 2023.03 ~ 2023.06 (4개월) | 팀장 및 데이터 처리</p>
-                <p class="project-desc">
-                    교환학생들의 수학보고서를 요약하여 정보를 공유하는 웹페이지 프로젝트입니다. 팀장을 맡아 자료 제출을 총괄하는 한편, 데이터 수집/전처리 파이프라인과 프론트엔드 일부를 담당했습니다.
-                </p>
-                <ul class="project-highlights">
-                    <li><strong>데이터 파이프라인 구축:</strong> Selenium을 활용해 문서(doc, hwp, pdf)를 수집하고, 파이썬 알고리즘을 통해 필요한 항목을 추출하여 CSV로 변환 및 DB 설계를 진행했습니다.</li>
-                    <li><strong>데이터 파편화 해결:</strong> 예전 파일과 최신 파일의 문서 포맷이 달라 추출이 어려운 문제를 겪고, 문서 내 모든 텍스트를 추출한 뒤 중복을 제거하는 방식으로 해결했습니다.</li>
-                    <li><strong>협업 및 유지보수 고려:</strong> 동료가 겪던 댓글 API 연동 문제를 분석해 해결을 도왔으며, 추후 구글 폼으로 데이터를 제출받아도 바로 적용할 수 있도록 데이터 가공 코드를 설계했습니다.</li>
-                </ul>
-                <ul class="project-tech">
-                    <li>Python</li>
-                    <li>Selenium</li>
-                    <li>OpenAI API</li>
-                    <li>MySQL</li>
-                </ul>
-                <a href="[깃허브 주소]" target="_blank" class="project-link">GitHub 소스 코드 및 README 보기 &rarr;</a>
+                <div class="card">
+                    <h3>교환학생 수학보고서 정보 공유 웹페이지 (SKKUEXS)</h3>
+                    <p class="subtitle">대학교 캡스톤 디자인 (A+) | 2023.03 ~ 2023.06 (4개월) | 팀장 및 데이터 처리</p>
+                    <ul>
+                        <li><strong>데이터 파이프라인 구축:</strong> 셀레니움을 활용해 문서(doc, hwp, pdf)를 수집하고, 파이썬 알고리즘을 통해 필요한 항목을 추출하여 CSV로 변환 및 DB 설계를 진행했습니다.</li>
+                        <li><strong>데이터 파편화 극복:</strong> 예전 파일과 최신 파일의 문서 포맷이 달라 데이터 추출이 어려운 문제를 겪고, 문서 내 모든 텍스트를 추출한 뒤 중복을 제거하는 방식으로 해결했습니다.</li>
+                        <li><strong>협업 및 유지보수 고려:</strong> 팀원이 겪던 댓글 API 연동 문제를 분석해 해결을 도왔으며, 추후 구글 폼으로 데이터를 제출받아도 바로 적용할 수 있도록 데이터 가공 코드를 설계했습니다.</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <!-- 4. 연락처 영역 -->
-        <section class="section">
-            <h2>연락처</h2>
-            <p>이메일: <a href="mailto:[이메일주소]">[이메일주소]</a></p>
-            <p>GitHub: <a href="[깃허브 주소]" target="_blank">[깃허브 주소]</a></p>
+        <!-- 섹션 3: Beyond Code -->
+        <section id="beyond" class="section">
+            <div class="container">
+                <h2>Beyond Code</h2>
+                
+                <div class="card">
+                    <h3>수학과 시뮬레이션의 교차 검증 (수학 지식인)</h3>
+                    <p>지식인 활동을 하며 게임 확률 질문을 마주했을 때, 행렬을 활용해 정확한 값을 계산하고 파이썬 시뮬레이션을 통해 동일한 결과가 나오는지 교차 검증하여 신뢰도를 높인 경험이 있습니다. 답변을 적기 전 항상 정답 여부를 검증하는 습관이 있으며, 논리적 검증을 통해 확실한 답을 도출하는 것을 즐깁니다.</p>
+                </div>
+
+                <div class="card">
+                    <h3>데이터로 증명하는 게이머 (메이플스토리 / 파이널판타지14)</h3>
+                    <p>단순한 공략 암기를 넘어 '이 처리가 최적일까?'를 고민합니다. 특히 메이플스토리 보스 레이드에서는 장비/스탯 창과 환산 사이트 정보를 영상 초반에 배치해 세팅의 신뢰성을 검증합니다. 또한, 남은 체력과 필요 스펙을 역산하여 다음 도전 배율을 최적화하는 등 데이터 기반의 분석력을 길렀습니다. 파이널판타지14에서도 공략을 분석해 동선을 짜고 처리법을 구성하며 응용력을 키웠습니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 섹션 4: Contact -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact</h2>
+                <p>이메일: <a href="mailto:your_email@example.com">your_email@example.com</a></p>
+                <p>GitHub: <a href="https://github.com/your_id" target="_blank">https://github.com/your_id</a></p>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 [홍길동]. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2026 [이름]. All rights reserved.</p>
+        </div>
     </footer>
 
+    <!-- 부드러운 스크롤 이동을 위한 자바스크립트 -->
+    <script>
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const headerOffset = 70;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
