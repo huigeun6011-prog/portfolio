@@ -286,13 +286,28 @@ main {
     font-weight: 500;
 }
 
-/* 푸터 */
+/* 푸터 기존 스타일 (색상 대비율 통과를 위해 #999 유지) */
 footer {
     text-align: center;
     padding: 40px 0;
     background-color: #222;
-    color: #999;
+    color: #999; 
     font-size: 0.9rem;
+}
+
+/* 👇 비공개 안내 문구 스타일 추가 */
+.privacy-notice {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #444; /* 구분선 추가 */
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #aaa; /* 카피라이트보다 조금 더 밝게 처리하여 가독성 확보 */
+}
+
+.privacy-notice strong {
+    color: #ccc; /* 강조하고 싶은 단어(실명, 게임명 등)를 조금 더 밝게 */
+    font-weight: 500;
 }
 
 /* -------------------------------------
