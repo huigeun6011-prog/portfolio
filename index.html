@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <meta name="googlebot" content="noindex, nofollow">
-    <title>[이름] | 백엔드 개발자 포트폴리오</title>
+    
+    <title>백엔드 개발자 포트폴리오</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
@@ -15,12 +15,12 @@
 
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#intro" class="nav-logo">[이름]</a>
+            <a href="#intro" class="nav-logo">Portfolio</a>
             <div class="nav-links">
                 <a href="#intro">Intro</a>
+                <a href="#play-think">Play & Think</a>
                 <a href="#journey">Journey</a>
                 <a href="#attitude">Attitude</a>
-                <a href="#beyond">Beyond Code</a>
                 <a href="#contact">Contact</a>
                 <button onclick="window.print()" class="print-btn">인쇄 / PDF 저장</button>
             </div>
@@ -28,58 +28,83 @@
     </nav>
 
     <main>
-        <!-- 섹션 1: Intro (기존과 동일) -->
+        <!-- 섹션 1: Intro -->
         <section id="intro" class="section hero-section">
             <div class="container intro-layout">
                 <div class="intro-text-area">
                     <h1 class="highlight">수학적 사고와 데이터로 증명하며,<br>최적의 흐름을 설계합니다.</h1>
+                    
                     <div class="core-tags">
-                        <span class="tag"># 원리탐구</span>
-                        <span class="tag"># 데이터검증</span>
-                        <span class="tag"># 자기주도성</span>
+                        <span class="tag" data-target="hl-principle" onclick="scrollToTarget(this)"># 원리탐구</span>
+                        <span class="tag" data-target="hl-data" onclick="scrollToTarget(this)"># 데이터검증</span>
+                        <span class="tag" data-target="hl-self" onclick="scrollToTarget(this)"># 자기주도성</span>
                     </div>
+
                     <div class="intro-text">
                         <p>
-                            안녕하세요, 백엔드 개발자 [이름]입니다. 수학과 복수전공으로 시작해 컴퓨터의 매력에 빠져 개발자의 길을 걷게 되었습니다. 
-                            저는 단순히 돌아가는 코드를 작성하는 것보다, <strong>'왜 이렇게 동작하는가'</strong>를 파고들어 원리를 이해하는 것을 즐깁니다.
+                            수학과 복수전공으로 시작해 컴퓨터의 매력에 빠져 <strong>백엔드 개발자를 준비하고 있습니다.</strong> 
+                            저는 단순히 돌아가는 코드를 작성하는 것보다, <strong class="intro-emphasis">'왜 이렇게 동작하는가'를 파고들어 원리를 이해하는 것</strong>을 즐깁니다.
                         </p>
                         <p>
                             이러한 성향은 일상에서도 드러납니다. 목적지까지의 경로를 미리 구상하며 신호등 주기까지 외워 동선을 최적화하고, 짐을 쌀 때도 이동 횟수를 줄이는 배치를 고민합니다. 
-                            게임에서도 마찬가지입니다. 단순한 공략 암기에 그치지 않고 '이 처리가 최적일까?', '다른 방법은 없을까?'를 고민하며 데이터를 기반으로 논리적으로 사고합니다. 
+                            게임에서도 마찬가지입니다. 단순한 공략 암기에 그치지 않고 '이 처리가 최적일까?', '다른 방법은 없을까?'를 고민하며 <strong class="intro-emphasis">데이터를 기반으로 논리적으로 사고</strong>합니다. 
                             신뢰할 수 있는 결과물을 만들어내는 개발자가 되겠습니다.
                         </p>
                     </div>
                 </div>
-                <div class="intro-image-area">
-                    <img src="img/profile.webp" alt="프로필 사진" class="profile-img">
+            </div>
+        </section>
+
+        <!-- 섹션 2: Play & Think -->
+        <section id="play-think" class="section">
+            <div class="container">
+                <h2>Play & Think</h2>
+                
+                <!-- 타겟 위치: 원리탐구 -->
+                <div class="card" id="target-game">
+                    <h3>게임 속에서도 원리를 파고드는 탐구자</h3>
+                    <div class="card-image-grid">
+                        <img src="img/beyond_game_1.webp" alt="게임 세팅 및 스탯 검증 캡처">
+                        <img src="img/beyond_game_2.webp" alt="게임 환산 사이트 및 도전 난이도 캡처">
+                    </div>
+                    <p><strong class="hl-target" id="hl-principle">단순한 공략 암기를 넘어 '이 처리가 최적일까?'를 고민</strong>합니다. 게임 내 기록을 남길 때도 단순히 결과만 보여주는 것이 아니라, 당시의 세팅과 조건을 함께 증명하여 신뢰성을 확보합니다. 또한, 주어진 자원을 바탕으로 목표 달성에 필요한 최소한의 조건을 역산하여 <strong>최적의 도전 난이도</strong>를 찾아냅니다. 더 나아가, 복잡한 협동 레이드에서는 공략을 분석해 수학적으로 그래프를 그리고 동선을 최적화하며 논리적 사고력과 응용력을 길렀습니다.</p>
+                </div>
+
+                <!-- 타겟 위치: 데이터검증 -->
+                <div class="card" id="target-math">
+                    <h3>수학과 시뮬레이션의 교차 검증 (지식iN)</h3>
+                    <div class="card-image-grid">
+                        <img src="img/beyond_math_1.webp" alt="지식iN 채택 화면">
+                        <img src="img/beyond_math_2.webp" alt="파이썬 시뮬레이션 코드 캡처">
+                    </div>
+                    <p>지식iN에서 <strong>별신 등급을 유지할 정도로 꾸준히 수학 답변을 하고 있습니다.</strong> 게임 확률 질문을 마주했을 때는 <strong class="hl-target" id="hl-data">행렬과 수학적 도구를 활용해 정확한 값을 계산하고, 파이썬 시뮬레이션을 통해 동일한 결과가 나오는지 교차 검증하여 신뢰도를 높인 경험</strong>이 있습니다. 답변을 적기 전 항상 정답 여부를 검증하는 습관이 있으며, 논리적 검증을 통해 확실한 답을 도출하는 것을 즐깁니다.</p>
                 </div>
             </div>
         </section>
 
-        <!-- 섹션 2: Journey -->
+        <!-- 섹션 3: Journey -->
         <section id="journey" class="section">
             <div class="container">
                 <h2>Journey</h2>
                 
-                <div class="card">
+                <!-- 타겟 위치: 자기주도성 -->
+                <div class="card" id="target-journey">
                     <h3>전자정부 표준프레임워크 기반 웹 게시판 시스템</h3>
                     <p class="subtitle">인턴십 경험 | 2026.05 ~ 2026.07 (2개월)</p>
-                    <!-- 이미지 2장 배치 -->
                     <div class="card-image-grid">
                         <img src="img/journey_egov_1.webp" alt="전자정부 게시판 화면 캡처">
                         <img src="img/journey_egov_2.webp" alt="전자정부 코드 및 DB 캡처">
                     </div>
                     <ul>
-                        <li><strong>1인 독학 및 환경 구축:</strong> 담당자의 제안으로 시작된 과제를 완수하기 위해, 매뉴얼과 사례만 참고하여 아파치 세팅부터 MySQL DB 스키마 생성 및 보안 설정, DDL/DML을 활용한 초기 데이터 적재까지 스스로 수행했습니다.</li>
+                        <li><strong>1인 독학 및 환경 구축:</strong> 담당자의 제안으로 시작된 과제를 완수하기 위해, <strong class="hl-target" id="hl-self">매뉴얼과 사례만 참고하여 아파치 세팅부터 MySQL DB 스키마 생성 및 보안 설정, DDL/DML을 활용한 초기 데이터 적재까지 스스로 수행했습니다.</strong></li>
                         <li><strong>데이터 흐름 파악:</strong> 화면의 URL과 이클립스 문자열 검색을 통해 코드를 역추적하며 Controller → Service → Mapper(MyBatis) → VO → DB로 이어지는 스프링 MVC의 핵심 흐름을 파악했습니다.</li>
                         <li><strong>핵심 기능 구현:</strong> 파악한 구조를 바탕으로 기존 게시판과 동일한 구조의 게시판을 새로 구현하며 원리를 체득했고, 세션 기반 로그인/회원가입, 파일 업로드(권한 제어), 댓글, 검색, 페이징 처리 등을 직접 구현했습니다.</li>
                     </ul>
                 </div>
 
                 <div class="card">
-                    <h3>교환학생 수학보고서 정보 공유 웹페이지 (SKKUEXS)</h3>
+                    <h3>교환학생 수학보고서 정보 공유 웹페이지</h3>
                     <p class="subtitle">대학교 캡스톤 디자인 (A+) | 2023.03 ~ 2023.06 (4개월) | 팀장 및 데이터 처리</p>
-                    <!-- 이미지 2장 배치 -->
                     <div class="card-image-grid">
                         <img src="img/journey_capstone_1.webp" alt="캡스톤 결과물 화면 캡처">
                         <img src="img/journey_capstone_2.webp" alt="캡스톤 데이터 처리 코드 캡처">
@@ -93,13 +118,13 @@
             </div>
         </section>
 
-        <!-- 섹션 3: Attitude (기존과 동일) -->
+        <!-- 섹션 4: Attitude -->
         <section id="attitude" class="section">
             <div class="container">
                 <h2>Attitude</h2>
                 <div class="card">
                     <h3>"이유 있는 코드"를 지향합니다</h3>
-                    <p>단순히 '그냥 해라', '그냥 따라 해라'라는 방식보다는 <strong>'왜 이렇게 동작하는가'</strong>에 대한 명확한 근거와 원리를 파악하는 것을 중요하게 생각합니다. 공략이나 코드를 볼 때도 판단 근거를 직접 찾아보고 검증하는 과정을 거칩니다. 눈앞의 결과물만 내는 것이 아니라, 원리를 이해해야만 다음에 응용할 수 있다고 믿기 때문입니다.</p>
+                    <p>당장 눈앞의 결과물을 내는 데 급급해 원리와 이유를 놓치고 넘어가면, 다음에 비슷한 문제를 만났을 때 응용할 수 없습니다. 저는 코드뿐만 아니라 게임의 공략을 볼 때도 이해가 되지 않는 부분은 원리와 근거를 직접 찾아내어 스스로 납득할 때까지 파고듭니다. 이렇게 질문하고 검증하는 과정을 통해 원리를 체득하며, 이를 바탕으로 새로운 문제에 응용하는 힘을 기릅니다.</p>
                 </div>
                 <div class="card">
                     <h3>문제 해결을 위한 몰입과 회복</h3>
@@ -108,34 +133,7 @@
             </div>
         </section>
 
-        <!-- 섹션 4: Beyond Code -->
-        <section id="beyond" class="section">
-            <div class="container">
-                <h2>Beyond Code</h2>
-                
-                <div class="card">
-                    <h3>수학과 시뮬레이션의 교차 검증 (수학 지식인)</h3>
-                    <!-- 이미지 2장 배치 -->
-                    <div class="card-image-grid">
-                        <img src="img/beyond_math_1.webp" alt="수학 지식인 채택 화면">
-                        <img src="img/beyond_math_2.webp" alt="파이썬 시뮬레이션 코드 캡처">
-                    </div>
-                    <p>지식인 활동을 하며 게임 확률 질문을 마주했을 때, 행렬을 활용해 정확한 값을 계산하고 파이썬 시뮬레이션을 통해 동일한 결과가 나오는지 교차 검증하여 신뢰도를 높인 경험이 있습니다. 답변을 적기 전 항상 정답 여부를 검증하는 습관이 있으며, 논리적 검증을 통해 확실한 답을 도출하는 것을 즐깁니다.</p>
-                </div>
-
-                <div class="card">
-                    <h3>데이터로 증명하는 게이머 (메이플스토리 / 파이널판타지14)</h3>
-                    <!-- 이미지 2장 배치 -->
-                    <div class="card-image-grid">
-                        <img src="img/beyond_game_1.webp" alt="메이플 장비 및 스탯 검증 캡처">
-                        <img src="img/beyond_game_2.webp" alt="메이플 환산 사이트 및 보스 배율 캡처">
-                    </div>
-                    <p>단순한 공략 암기를 넘어 '이 처리가 최적일까?'를 고민합니다. 특히 메이플스토리 보스 레이드에서는 장비/스탯 창과 환산 사이트 정보를 영상 초반에 배치해 세팅의 신뢰성을 검증합니다. 또한, 남은 체력과 필요 스펙을 역산하여 다음 도전 배율을 최적화하는 등 데이터 기반의 분석력을 길렀습니다. 파이널판타지14에서도 공략을 분석해 동선을 짜고 처리법을 구성하며 응용력을 키웠습니다.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 섹션 5: Contact (기존과 동일) -->
+        <!-- 섹션 5: Contact -->
         <section id="contact" class="section">
             <div class="container">
                 <h2>Contact</h2>
@@ -147,11 +145,12 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 [이름]. All rights reserved.</p>
+            <p>&copy; 2026 Backend Developer Portfolio. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
+        // 1. 부드러운 스크롤 이동 (상단 메뉴용)
         document.querySelectorAll('.nav-links a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -170,6 +169,44 @@
                 }
             });
         });
+
+        // 2. 태그 클릭 시 하단 카드로 스크롤 및 하이라이트 기능
+        function scrollToTarget(element) {
+            const targetId = element.getAttribute('data-target');
+            
+            // 각 태그별로 이동할 카드의 ID를 매핑
+            let cardId = '';
+            if (targetId === 'hl-principle') cardId = 'target-game';
+            else if (targetId === 'hl-data') cardId = 'target-math';
+            else if (targetId === 'hl-self') cardId = 'target-journey';
+
+            // 1. 스크롤 이동
+            if (cardId) {
+                const targetCard = document.getElementById(cardId);
+                if (targetCard) {
+                    const headerOffset = 80;
+                    const elementPosition = targetCard.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    // 2. 하이라이트 효과 토글
+                    // 기존에 켜져 있던 하이라이트를 모두 끕니다.
+                    document.querySelectorAll('.hl-target').forEach(el => el.classList.remove('hl-active'));
+                    document.querySelectorAll('.card').forEach(el => el.classList.remove('card-highlight'));
+
+                    // 클릭한 타겟의 하이라이트를 켭니다.
+                    const targetText = document.getElementById(targetId);
+                    if (targetText) {
+                        targetText.classList.add('hl-active');
+                        targetCard.classList.add('card-highlight');
+                    }
+                }
+            }
+        }
     </script>
 </body>
 </html>

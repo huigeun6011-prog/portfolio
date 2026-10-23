@@ -112,67 +112,68 @@ main {
 /* Intro 섹션 전용 */
 .hero-section {
     background-color: #ffffff;
-    padding: 80px 0;
+    padding: 100px 0; 
+    text-align: center; 
 }
 
 .intro-layout {
     display: flex;
-    align-items: center;
-    gap: 40px;
+    justify-content: center;
 }
 
 .intro-text-area {
-    flex: 1;
-}
-
-.intro-image-area {
-    width: 250px; 
-    flex-shrink: 0;
-}
-
-.profile-img {
-    width: 100%;
-    aspect-ratio: 1 / 1; 
-    object-fit: cover;
-    border-radius: 50%; 
-    border: 3px solid #eef4fc;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    max-width: 750px; 
 }
 
 .hero-section h1 {
-    font-size: 2.2rem;
+    font-size: 2.4rem; 
     line-height: 1.4;
-    margin-bottom: 20px; 
+    margin-bottom: 25px; 
 }
 
+/* 토글 태그 스타일 */
 .core-tags {
     display: flex;
+    justify-content: center; 
     gap: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     flex-wrap: wrap;
 }
 
 .core-tags .tag {
-    background-color: #eef4fc;
-    color: #0056b3;
+    background-color: #f0f0f0;
+    color: #555;
     padding: 6px 14px;
     border-radius: 20px;
     font-size: 0.95rem;
     font-weight: 700;
     letter-spacing: 0.5px;
-    border: 1px solid #d0e2f5;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.core-tags .tag:hover {
+    background-color: #eef4fc;
+    color: #0056b3;
+}
+
+/* Intro 내 강조 표시 (태그 클릭과 무관하게 기본 적용) */
+.intro-emphasis {
+    color: #111;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: #a0c4e8; /* 옅은 파란색 밑줄 */
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
 }
 
 .intro-text p {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     color: #555;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-align: justify;
-}
-
-.intro-text strong {
-    color: #111;
-    font-weight: 700;
+    text-align-last: center; 
 }
 
 /* 카드 디자인 */
@@ -183,11 +184,17 @@ main {
     padding: 30px;
     margin-bottom: 25px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-    transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s, border-color 0.3s;
 }
 
 .card:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* 태그 클릭 시 해당 카드 강조 효과 */
+.card.card-highlight {
+    border-color: #0056b3;
+    box-shadow: 0 4px 15px rgba(0, 86, 179, 0.15);
 }
 
 .card h3 {
@@ -203,20 +210,20 @@ main {
     font-weight: 500;
 }
 
-/* ✨ 카드 내부 2열 이미지 그리드 ✨ */
+/* 카드 내부 2열 이미지 그리드 */
 .card-image-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 1:1 비율로 나란히 배치 */
-    gap: 15px; /* 이미지 사이 간격 */
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px; 
     margin-bottom: 20px;
 }
 
 .card-image-grid img {
     width: 100%;
     height: auto;
-    aspect-ratio: 4 / 3; /* 이미지의 기본 비율을 4:3으로 고정 (선택 사항) */
-    object-fit: contain; /* 이미지가 잘리지 않고 비율 유지하며 들어감 */
-    background-color: #f8f9fa; /* 여백 생길 때를 대비한 옅은 배경 */
+    aspect-ratio: 4 / 3; 
+    object-fit: contain; 
+    background-color: #f8f9fa; 
     border-radius: 6px;
     border: 1px solid #eee;
     padding: 5px;
@@ -249,6 +256,19 @@ main {
     text-align: justify;
 }
 
+/* 본문 하이라이트 스타일 (태그 클릭 시) */
+.hl-target {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hl-target.hl-active {
+    background-color: #e0f2fe;
+    color: #0056b3;
+    padding: 0 4px;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0, 86, 179, 0.2);
+}
+
 /* Contact 섹션 */
 #contact p {
     font-size: 1rem;
@@ -270,7 +290,7 @@ footer {
 }
 
 /* -------------------------------------
-   🖨️ 인쇄(Print) 최적화 CSS (@media print)
+   🖨️ 인쇄(Print) 최적화 CSS
 -------------------------------------- */
 @media print {
     body {
@@ -299,19 +319,32 @@ footer {
     }
 
     .core-tags .tag {
-        border: 1px solid #000;
-        color: #000;
-        background: #fff;
+        background-color: transparent !important;
+        color: #000 !important;
+        border: 1px solid #999 !important;
+        padding: 2px 8px !important;
+        font-size: 0.9rem !important;
     }
 
-    .intro-layout {
-        flex-direction: column;
-        gap: 20px;
+    .intro-emphasis {
+        text-decoration: underline;
+        text-decoration-color: #000;
     }
 
-    .profile-img {
-        width: 150px;
-        border: 1px solid #000;
+    .hl-target.hl-active {
+        background-color: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        color: #000 !important;
+    }
+
+    .card.card-highlight {
+        border-color: #ccc;
+        box-shadow: none;
+    }
+
+    .hero-section {
+        padding: 20px 0;
     }
 
     .card {
@@ -322,7 +355,6 @@ footer {
         page-break-inside: avoid;
     }
 
-    /* 인쇄 시 2열 이미지 그리드 유지 */
     .card-image-grid {
         gap: 10px;
         margin-bottom: 15px;
@@ -333,7 +365,7 @@ footer {
         box-shadow: none;
         background: none;
         padding: 0;
-        max-height: 250px; /* 인쇄 시 이미지가 너무 커지지 않게 제한 */
+        max-height: 250px; 
     }
 
     a[href^="http"]::after, a[href^="mailto"]::after {
@@ -349,25 +381,10 @@ footer {
 
 /* 모바일 화면 대응 */
 @media (max-width: 768px) {
-    .intro-layout {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-    
-    .intro-text p {
-        text-align: center;
-    }
-    
-    .core-tags {
-        justify-content: center;
-    }
-    
     .hero-section h1 {
         font-size: 1.8rem;
-        text-align: center;
     }
 
-    /* 모바일에서는 이미지를 위아래로 배치 */
     .card-image-grid {
         grid-template-columns: 1fr; 
     }
