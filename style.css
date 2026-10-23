@@ -30,6 +30,14 @@ a:hover {
     color: #0056b3; 
 }
 
+/* ✨ Tab 키 포커스 스타일 (가장 중요) ✨ */
+a:focus, button:focus, span.tag:focus, h1:focus, h2:focus, h3:focus {
+    outline: 2px solid #0056b3; /* 파란색 테두리 */
+    outline-offset: 4px; /* 테두리와 요소 사이 간격 */
+    border-radius: 4px; /* 둥근 모서리 */
+    transition: outline 0.1s ease;
+}
+
 /* 1. 상단 내비게이션 바 */
 .navbar {
     position: fixed;
@@ -158,12 +166,11 @@ main {
     color: #0056b3;
 }
 
-/* Intro 내 강조 표시 (태그 클릭과 무관하게 기본 적용) */
 .intro-emphasis {
     color: #111;
     font-weight: 700;
     text-decoration: underline;
-    text-decoration-color: #a0c4e8; /* 옅은 파란색 밑줄 */
+    text-decoration-color: #a0c4e8; 
     text-underline-offset: 3px;
     text-decoration-thickness: 2px;
 }
@@ -191,7 +198,6 @@ main {
     box-shadow: 0 4px 12px rgba(0,0,0,0.06);
 }
 
-/* 태그 클릭 시 해당 카드 강조 효과 */
 .card.card-highlight {
     border-color: #0056b3;
     box-shadow: 0 4px 15px rgba(0, 86, 179, 0.15);
@@ -256,7 +262,7 @@ main {
     text-align: justify;
 }
 
-/* 본문 하이라이트 스타일 (태그 클릭 시) */
+/* 본문 하이라이트 스타일 */
 .hl-target {
     transition: background-color 0.3s, color 0.3s;
 }
@@ -285,7 +291,7 @@ footer {
     text-align: center;
     padding: 40px 0;
     background-color: #222;
-    color: #888;
+    color: #999;
     font-size: 0.9rem;
 }
 
@@ -376,6 +382,11 @@ footer {
 
     .hero-section h1, .highlight {
         color: #000000;
+    }
+
+    /* 인쇄 시 포커스 테두리 제거 */
+    *:focus {
+        outline: none !important;
     }
 }
 

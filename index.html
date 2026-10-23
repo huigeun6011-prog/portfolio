@@ -15,14 +15,14 @@
 
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#intro" class="nav-logo">Portfolio</a>
+            <a href="#intro" class="nav-logo" tabindex="0">Portfolio</a>
             <div class="nav-links">
-                <a href="#intro">Intro</a>
-                <a href="#play-think">Play & Think</a>
-                <a href="#journey">Journey</a>
-                <a href="#attitude">Attitude</a>
-                <a href="#contact">Contact</a>
-                <button onclick="window.print()" class="print-btn">인쇄 / PDF 저장</button>
+                <a href="#intro" tabindex="0">Intro</a>
+                <a href="#play-think" tabindex="0">Play & Think</a>
+                <a href="#journey" tabindex="0">Journey</a>
+                <a href="#attitude" tabindex="0">Attitude</a>
+                <a href="#contact" tabindex="0">Contact</a>
+                <button onclick="window.print()" class="print-btn" tabindex="0">인쇄 / PDF 저장</button>
             </div>
         </div>
     </nav>
@@ -32,12 +32,14 @@
         <section id="intro" class="section hero-section">
             <div class="container intro-layout">
                 <div class="intro-text-area">
-                    <h1 class="highlight">수학적 사고와 데이터로 증명하며,<br>최적의 흐름을 설계합니다.</h1>
+                    <!-- 제목에 tabindex 추가 -->
+                    <h1 class="highlight" tabindex="0">수학적 사고와 데이터로 증명하며,<br>최적의 흐름을 설계합니다.</h1>
                     
                     <div class="core-tags">
-                        <span class="tag" data-target="hl-principle" onclick="scrollToTarget(this)"># 원리탐구</span>
-                        <span class="tag" data-target="hl-data" onclick="scrollToTarget(this)"># 데이터검증</span>
-                        <span class="tag" data-target="hl-self" onclick="scrollToTarget(this)"># 자기주도성</span>
+                        <!-- 태그들은 스크롤을 유발하는 액션이므로 tabindex 추가 -->
+                        <span class="tag" data-target="hl-principle" onclick="scrollToTarget(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){scrollToTarget(this)}"># 원리탐구</span>
+                        <span class="tag" data-target="hl-data" onclick="scrollToTarget(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){scrollToTarget(this)}"># 데이터검증</span>
+                        <span class="tag" data-target="hl-self" onclick="scrollToTarget(this)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){scrollToTarget(this)}"># 자기주도성</span>
                     </div>
 
                     <div class="intro-text">
@@ -58,11 +60,12 @@
         <!-- 섹션 2: Play & Think -->
         <section id="play-think" class="section">
             <div class="container">
-                <h2>Play & Think</h2>
+                <!-- 섹션 제목에 tabindex 추가 -->
+                <h2 tabindex="0">Play & Think</h2>
                 
-                <!-- 타겟 위치: 원리탐구 -->
                 <div class="card" id="target-game">
-                    <h3>게임 속에서도 원리를 파고드는 탐구자</h3>
+                    <!-- 카드 제목에 tabindex 추가 -->
+                    <h3 tabindex="0">게임 속에서도 원리를 파고드는 탐구자</h3>
                     <div class="card-image-grid">
                         <img src="img/beyond_game_1.webp" alt="게임 세팅 및 스탯 검증 캡처">
                         <img src="img/beyond_game_2.webp" alt="게임 환산 사이트 및 도전 난이도 캡처">
@@ -70,9 +73,8 @@
                     <p><strong class="hl-target" id="hl-principle">단순한 공략 암기를 넘어 '이 처리가 최적일까?'를 고민</strong>합니다. 게임 내 기록을 남길 때도 단순히 결과만 보여주는 것이 아니라, 당시의 세팅과 조건을 함께 증명하여 신뢰성을 확보합니다. 또한, 주어진 자원을 바탕으로 목표 달성에 필요한 최소한의 조건을 역산하여 <strong>최적의 도전 난이도</strong>를 찾아냅니다. 더 나아가, 복잡한 협동 레이드에서는 공략을 분석해 수학적으로 그래프를 그리고 동선을 최적화하며 논리적 사고력과 응용력을 길렀습니다.</p>
                 </div>
 
-                <!-- 타겟 위치: 데이터검증 -->
                 <div class="card" id="target-math">
-                    <h3>수학과 시뮬레이션의 교차 검증 (지식iN)</h3>
+                    <h3 tabindex="0">수학과 시뮬레이션의 교차 검증 (지식iN)</h3>
                     <div class="card-image-grid">
                         <img src="img/beyond_math_1.webp" alt="지식iN 채택 화면">
                         <img src="img/beyond_math_2.webp" alt="파이썬 시뮬레이션 코드 캡처">
@@ -85,11 +87,10 @@
         <!-- 섹션 3: Journey -->
         <section id="journey" class="section">
             <div class="container">
-                <h2>Journey</h2>
+                <h2 tabindex="0">Journey</h2>
                 
-                <!-- 타겟 위치: 자기주도성 -->
                 <div class="card" id="target-journey">
-                    <h3>전자정부 표준프레임워크 기반 웹 게시판 시스템</h3>
+                    <h3 tabindex="0">전자정부 표준프레임워크 기반 웹 게시판 시스템</h3>
                     <p class="subtitle">인턴십 경험 | 2026.05 ~ 2026.07 (2개월)</p>
                     <div class="card-image-grid">
                         <img src="img/journey_egov_1.webp" alt="전자정부 게시판 화면 캡처">
@@ -103,7 +104,7 @@
                 </div>
 
                 <div class="card">
-                    <h3>교환학생 수학보고서 정보 공유 웹페이지</h3>
+                    <h3 tabindex="0">교환학생 수학보고서 정보 공유 웹페이지</h3>
                     <p class="subtitle">대학교 캡스톤 디자인 (A+) | 2023.03 ~ 2023.06 (4개월) | 팀장 및 데이터 처리</p>
                     <div class="card-image-grid">
                         <img src="img/journey_capstone_1.webp" alt="캡스톤 결과물 화면 캡처">
@@ -121,13 +122,13 @@
         <!-- 섹션 4: Attitude -->
         <section id="attitude" class="section">
             <div class="container">
-                <h2>Attitude</h2>
+                <h2 tabindex="0">Attitude</h2>
                 <div class="card">
-                    <h3>"이유 있는 코드"를 지향합니다</h3>
+                    <h3 tabindex="0">"이유 있는 코드"를 지향합니다</h3>
                     <p>당장 눈앞의 결과물을 내는 데 급급해 원리와 이유를 놓치고 넘어가면, 다음에 비슷한 문제를 만났을 때 응용할 수 없습니다. 저는 코드뿐만 아니라 게임의 공략을 볼 때도 이해가 되지 않는 부분은 원리와 근거를 직접 찾아내어 스스로 납득할 때까지 파고듭니다. 이렇게 질문하고 검증하는 과정을 통해 원리를 체득하며, 이를 바탕으로 새로운 문제에 응용하는 힘을 기릅니다.</p>
                 </div>
                 <div class="card">
-                    <h3>문제 해결을 위한 몰입과 회복</h3>
+                    <h3 tabindex="0">문제 해결을 위한 몰입과 회복</h3>
                     <p>문제가 생기면 해결할 때까지 밤을 새우며 몰입하는 편입니다. 다만, 막히거나 지칠 때는 혼자만의 시간을 가지며 좋아하는 게임이나 음악으로 머리를 식힙니다. 혼자만의 시간을 통해 에너지를 충전하고, 다시 문제 해결에 집중하는 방식으로 지속 가능한 개발을 지향합니다.</p>
                 </div>
             </div>
@@ -136,7 +137,7 @@
         <!-- 섹션 5: Contact -->
         <section id="contact" class="section">
             <div class="container">
-                <h2>Contact</h2>
+                <h2 tabindex="0">Contact</h2>
                 <p>이메일: <a href="mailto:huigeun6011@gmail.com">huigeun6011@gmail.com</a></p>
                 <p>GitHub: <a href="https://github.com/huigeun6011-prog" target="_blank">https://github.com/huigeun6011-prog</a></p>
             </div>
@@ -150,7 +151,6 @@
     </footer>
 
     <script>
-        // 1. 부드러운 스크롤 이동 (상단 메뉴용)
         document.querySelectorAll('.nav-links a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -170,17 +170,14 @@
             });
         });
 
-        // 2. 태그 클릭 시 하단 카드로 스크롤 및 하이라이트 기능
         function scrollToTarget(element) {
             const targetId = element.getAttribute('data-target');
             
-            // 각 태그별로 이동할 카드의 ID를 매핑
             let cardId = '';
             if (targetId === 'hl-principle') cardId = 'target-game';
             else if (targetId === 'hl-data') cardId = 'target-math';
             else if (targetId === 'hl-self') cardId = 'target-journey';
 
-            // 1. 스크롤 이동
             if (cardId) {
                 const targetCard = document.getElementById(cardId);
                 if (targetCard) {
@@ -193,12 +190,9 @@
                         behavior: 'smooth'
                     });
 
-                    // 2. 하이라이트 효과 토글
-                    // 기존에 켜져 있던 하이라이트를 모두 끕니다.
                     document.querySelectorAll('.hl-target').forEach(el => el.classList.remove('hl-active'));
                     document.querySelectorAll('.card').forEach(el => el.classList.remove('card-highlight'));
 
-                    // 클릭한 타겟의 하이라이트를 켭니다.
                     const targetText = document.getElementById(targetId);
                     if (targetText) {
                         targetText.classList.add('hl-active');
